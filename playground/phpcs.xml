@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ruleset name="TraitUsePlayground">
+    <description>Playground for testing trait use sniffs — reproduces endless loop</description>
+
+    <!-- TraitUseOrder: sorts trait use statements alphabetically -->
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseOrder"/>
+
+    <!-- TraitUseSpacing: enforces no blank lines between trait uses -->
+    <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
+        <properties>
+            <property name="linesCountBeforeFirstUse" value="0"/>
+            <property name="linesCountBetweenUses" value="0"/>
+            <property name="linesCountAfterLastUse" value="1"/>
+        </properties>
+    </rule>
+</ruleset>
